@@ -15,7 +15,7 @@ SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
 
-EGIT_REPO_URI="git@github.com:inverse-inc/sogo-connector.tb31.git"
+EGIT_REPO_URI="https://github.com/inverse-inc/sogo-connector.tb31.git"
 EGIT_COMMIT="0b0959bd023c5e19784948c82bdc0c0db95c94b5"
 #SRC_URI="https://github.com/inverse-inc/${PN}.tb${THUNDERBIRD_VERSION}/archive/${P}.zip"
 
