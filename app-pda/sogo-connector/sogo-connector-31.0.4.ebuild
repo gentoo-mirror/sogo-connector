@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=5
+EAPI=6
 
 inherit eutils versionator #git-r3
 
@@ -26,6 +26,7 @@ DEPEND="${RDEPEND}"
 
 src_prepare() {
         epatch "${FILESDIR}/makefile.patch"
+	default
 }
 
 src_install() {
