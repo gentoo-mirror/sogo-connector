@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit eutils versionator git-r3
+inherit eutils versionator #git-r3
 
 DESCRIPTION="CardDAV plugin for mail-client/thunderbird"
 HOMEPAGE="http://www.sogo.nu/downloads/frontends.html"
@@ -15,9 +15,9 @@ SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
 
-EGIT_REPO_URI="https://github.com/inverse-inc/sogo-connector.tb31.git"
-EGIT_COMMIT="0b0959bd023c5e19784948c82bdc0c0db95c94b5"
-#SRC_URI="https://github.com/inverse-inc/${PN}.tb${THUNDERBIRD_VERSION}/archive/${P}.zip"
+#EGIT_REPO_URI="https://github.com/inverse-inc/sogo-connector.tb31.git"
+#EGIT_COMMIT="0b0959bd023c5e19784948c82bdc0c0db95c94b5"
+SRC_URI="https://github.com/inverse-inc/${PN}.tb${THUNDERBIRD_VERSION}/archive/${P}.tar.gz"
 
 RDEPEND="|| ( =mail-client/thunderbird-45*[lightning] =mail-client/thunderbird-52*[lightning] )"
 
