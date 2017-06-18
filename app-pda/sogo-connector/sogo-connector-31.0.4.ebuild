@@ -22,7 +22,7 @@ SRC_URI="https://github.com/inverse-inc/${PN}.tb${THUNDERBIRD_VERSION}/archive/$
 RDEPEND="|| ( =mail-client/thunderbird-45*[lightning] =mail-client/thunderbird-52*[lightning] )"
 
 DEPEND="${RDEPEND}"
-#S="${WORKDIR}/${PN}.tb${THUNDERBIRD_VERSION}-${P}"
+S="${WORKDIR}/${PN}.tb${THUNDERBIRD_VERSION}-${P}"
 
 src_prepare() {
         epatch "${FILESDIR}/makefile.patch"
