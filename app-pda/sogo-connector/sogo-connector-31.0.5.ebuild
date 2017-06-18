@@ -25,7 +25,8 @@ DEPEND="${RDEPEND}"
 #S="${WORKDIR}/${PN}.tb${THUNDERBIRD_VERSION}-${P}"
 
 src_prepare() {
-        epatch "${FILESDIR}/makefile.patch"
+  epatch "${FILESDIR}/makefile.patch"
+  default
 }
 
 src_install() {
