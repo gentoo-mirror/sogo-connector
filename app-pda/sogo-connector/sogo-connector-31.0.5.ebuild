@@ -15,8 +15,6 @@ SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
 
-#EGIT_REPO_URI="https://github.com/inverse-inc/sogo-connector.tb31.git"
-#EGIT_COMMIT="0b0959bd023c5e19784948c82bdc0c0db95c94b5"
 SRC_URI="https://github.com/inverse-inc/${PN}.tb${THUNDERBIRD_VERSION}/archive/${P}.tar.gz"
 
 RDEPEND="|| ( =mail-client/thunderbird-45*[lightning] =mail-client/thunderbird-52*[lightning] )"
@@ -26,6 +24,7 @@ S="${WORKDIR}/${PN}.tb${THUNDERBIRD_VERSION}-${P}"
 
 src_prepare() {
         epatch "${FILESDIR}/makefile.patch"
+	epatch "${FILESDIR}/31.0.5-fix-version.patch"
 	default
 }
 
@@ -35,6 +34,5 @@ src_install() {
 	emid=$(sed -n '/em:id=/!d; s/\s*em:id="//; s/"\s*//; p; q' install.rdf)
 
 	dodir ${MOZILLA_FIVE_HOME}/extensions/${emid} || die
-	cd "${ED}"${MOZILLA_FIVE_HOME}/extensions/${emid} || die
-	unzip "${S}/${P}.xpi" || die
+	unzip "${P}.xpi" -d "${ED}"${MOZILLA_FIVE_HOME}/extensions/${emid}|| die
 }
