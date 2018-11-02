@@ -20,11 +20,10 @@ SRC_URI="https://github.com/inverse-inc/${PN}/archive/${P}.tar.gz"
 RDEPEND="=mail-client/thunderbird-60*[lightning]"
 
 DEPEND="${RDEPEND}"
-S="${WORKDIR}/${PN}.tb${THUNDERBIRD_VERSION}-${P}"
+S="${WORKDIR}/${PN}-${P}"
 
 src_prepare() {
         epatch "${FILESDIR}/makefile.patch"
-	epatch "${FILESDIR}/31.0.5-fix-version.patch"
 	default
 }
 
