@@ -10,7 +10,7 @@ DESCRIPTION="CardDAV plugin for mail-client/thunderbird"
 HOMEPAGE="http://www.sogo.nu/downloads/frontends.html"
 THUNDERBIRD_VERSION="$(get_major_version )"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
