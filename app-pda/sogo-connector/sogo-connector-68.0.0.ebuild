@@ -10,21 +10,20 @@ DESCRIPTION="CardDAV plugin for mail-client/thunderbird"
 HOMEPAGE="http://www.sogo.nu/downloads/frontends.html"
 THUNDERBIRD_VERSION="$(get_major_version )"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
 
-SRC_URI="https://github.com/inverse-inc/${PN}.tb${THUNDERBIRD_VERSION}/archive/${P}.tar.gz"
+SRC_URI="https://github.com/inverse-inc/${PN}/archive/${P}.tar.gz"
 
-RDEPEND="|| ( =mail-client/thunderbird-45*[lightning] =mail-client/thunderbird-52*[lightning] )"
+RDEPEND="=mail-client/thunderbird-68*[lightning]"
 
 DEPEND="${RDEPEND}"
-S="${WORKDIR}/${PN}.tb${THUNDERBIRD_VERSION}-${P}"
+S="${WORKDIR}/${PN}-${P}"
 
 src_prepare() {
-        epatch "${FILESDIR}/makefile.patch"
-	epatch "${FILESDIR}/31.0.5-fix-version.patch"
+        epatch "${FILESDIR}/${P}-makefile.patch"
 	default
 }
 
