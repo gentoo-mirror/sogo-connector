@@ -23,7 +23,7 @@ DEPEND="${RDEPEND}"
 S="${WORKDIR}/${PN}-${P}"
 
 src_prepare() {
-        epatch "${FILESDIR}/${P}-makefile.patch"
+        epatch "${FILESDIR}/makefile.patch"
 	default
 }
 
